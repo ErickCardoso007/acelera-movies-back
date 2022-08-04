@@ -10,3 +10,9 @@ export const getMovie = async (request, response) => {
   const filme = await movieRepository.find()
   return response.json(filme)
 }
+
+export const getID = async (request, response) => {
+  const idRepository = getRepository(Movie)
+  const idMovie = await idRepository.find()
+  return response.json(request.params.id, idMovie)
+}
