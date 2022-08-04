@@ -1,3 +1,4 @@
+import { getLogin } from "@controllers/login"
 import { getMovie, itsWorks } from "@controllers/movie"
 
 export const defineRoutes = (app) => {
