@@ -30,3 +30,12 @@ export const deleteMovie = async (request, response) => {
   const idMovie = await idRepository.delete(request.params.id)
   return response.json(idMovie)
 }
+
+export const putMovie = async (request, response) => {
+  const movieRepository = getRepository(Movie)
+  const movieEdit = await movieRepository.update(
+    request.params.id,
+    request.body
+  )
+  return response.json(movieEdit)
+}
